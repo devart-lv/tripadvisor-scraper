@@ -88,7 +88,7 @@ async function processHotel({ placeInfo, client, dataset, session }) {
         id: placeInfo.location_id,
         type: 'HOTEL',
         name: placeInfo.name,
-        image: placeInfo.photo.images.original.url,
+        image: placeInfo.photo.images,
         awards: placeInfo.awards?.map((award) => ({ year: award.year, name: award.display_name })) ?? [],
         rankingPosition: placeInfo.ranking_position,
         priceLevel: placeInfo.price_level,
